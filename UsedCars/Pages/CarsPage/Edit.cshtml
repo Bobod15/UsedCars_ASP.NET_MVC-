@@ -1,0 +1,42 @@
+﻿@page "{carIdent:int?}"
+@model UsedCars.Pages.CarsPage.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Editing @Model.Car.Model @Model.Car.Manifacturer</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Car.ID" />
+    <div class="form-group">
+        <label asp-for="Car.Manifacturer"></label>
+        <input asp-for="Car.Manifacturer" class="form-control" />
+        <span class="text-danger" asp-validation-for="Car.Manifacturer"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Car.Model"></label>
+        <input asp-for="Car.Model" class="form-control" />
+        <span class="text-danger" asp-validation-for="Car.Model"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Car.BuildYear"></label>
+        <input asp-for="Car.BuildYear" class="form-control" />
+        <span class="text-danger" asp-validation-for="Car.BuildYear"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Car.Price"></label>
+        <input asp-for="Car.Price" class="form-control" />
+        <span class="text-danger" asp-validation-for="Car.Price"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Car.OwnerInfo"></label>
+        <input asp-for="Car.OwnerInfo" class="form-control" />
+        <span class="text-danger" asp-validation-for="Car.OwnerInfo"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

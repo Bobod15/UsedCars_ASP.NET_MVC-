@@ -1,0 +1,99 @@
+﻿@page
+@model UsedCars.Pages.Cars.ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Cars</h1>
+
+<form method="get">
+    <div class="form-group simple_search">
+        <div class="input-group">
+            <input type="search" style="" class="form-control" asp-for="SearchVal"/>
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="glyphicon glyphicon-search"></i> 
+                </button>
+            </span>
+        </div>
+    </div>
+    <div class="form-inline">
+        <div class="form-group advanced_search" style="display: none">
+            <div class="form-group">
+                <label for="Manifac">Manifacurer: </label>
+                <input type="search" id="Manifac" class="col form-control" asp-for="ManifacVal" />
+                <label for="Model">Model: </label>
+                <input type="search" id="Model" class="col form-control" asp-for="ModelVal" />
+                <label for="Owner">Owner Info: </label>
+                <input type="search" id="Owner" class="col form-control" asp-for="OwnerVal" />
+                <label for="Year">Build year: </label>
+                <input type="search" id="Year" class="col form-control" asp-for="YearVal" />
+                <span class="col">
+                    <button class="btn btn-default">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="text-info">
+        <span class="advanced_search_toggle" onclick="ToggleSearchBars()">Advanced search...</span>
+    </div>
+</form>
+
+<script>
+    function ToggleSearchBars(event) {
+        document.querySelectorAll('input[type="search"]').forEach(function (element) {
+            element.value = "";
+        })
+
+        if ($(".simple_search").is(":hidden")) {
+            
+            $(".simple_search").toggle();
+            $(".advanced_search").toggle();
+        }
+        else {
+            $(".simple_search").toggle();
+            $(".advanced_search").toggle();
+        }
+    }
+</script>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td><b>Manifacturer</b></td>
+            <td><b>Model</b></td>
+            <td><b>Build Year</b></td>
+            <td><b>Price</b></td>
+            <td><b>Owner Info</b></td>
+            <td><b>Details</b></td>
+            <td><b>Edit</b></td>
+        </tr>
+    </thead>
+    @foreach(var Car in Model.DisplayCars)
+    {
+    <tbody>
+        <tr>
+            <td>@Car.Manifacturer</td>
+            <td>@Car.Model</td>
+            <td>@Car.BuildYear</td>
+            <td>@Car.Price</td>
+            <td>@Car.OwnerInfo</td>
+            <td>
+                <a class="btn btn-lg" asp-page="./Detail" asp-route-carIdent="@Car.ID">
+                    <i class="glyphicon glyphicon-zoom-in"></i>
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-lg" asp-page="./Edit" asp-route-carIdent="@Car.ID">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+    }
+</table>
+
+<a asp-page="./Edit" class="btn btn-primary">Add new</a>
+

@@ -1,0 +1,31 @@
+﻿@page "{carIdent:int}"
+@model UsedCars.Pages.CarsPage.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>@Model.Car.Manifacturer @Model.Car.Model</h2>
+<ul class="list-group">
+    <li class="list-group-item">
+        Manifacturer : @Model.Car.Manifacturer
+    </li>
+    <li class="list-group-item">
+        Model : @Model.Car.Model
+    </li>
+    <li class="list-group-item">
+        Build Year : @Model.Car.BuildYear
+    </li>
+    <li class="list-group-item">
+        Price : @Model.Car.Price
+    </li>
+    <li class="list-group-item">
+        Owners information : @Model.Car.OwnerInfo
+    </li>
+    </ul>
+
+    @if (Model.SaveMessage != null)
+    {
+        <div class="alert alert-info">@Model.SaveMessage</div>
+    }
+
+    <a asp-page="./List" class="btn btn-default">Car List</a>

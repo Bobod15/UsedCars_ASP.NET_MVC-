@@ -1,0 +1,14 @@
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\bin\Debug\netcoreapp2.1\UsedCars.Data.deps.json
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\bin\Debug\netcoreapp2.1\UsedCars.Data.runtimeconfig.json
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\bin\Debug\netcoreapp2.1\UsedCars.Data.runtimeconfig.dev.json
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\bin\Debug\netcoreapp2.1\UsedCars.Data.dll
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\bin\Debug\netcoreapp2.1\UsedCars.Data.pdb
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\bin\Debug\netcoreapp2.1\UsedCars.Core.dll
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\bin\Debug\netcoreapp2.1\UsedCars.Core.pdb
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\obj\Debug\netcoreapp2.1\UsedCars.Data.csprojAssemblyReference.cache
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\obj\Debug\netcoreapp2.1\UsedCars.Data.csproj.CoreCompileInputs.cache
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\obj\Debug\netcoreapp2.1\UsedCars.Data.AssemblyInfoInputs.cache
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\obj\Debug\netcoreapp2.1\UsedCars.Data.AssemblyInfo.cs
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\obj\Debug\netcoreapp2.1\UsedCars.Data.csproj.CopyComplete
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\obj\Debug\netcoreapp2.1\UsedCars.Data.dll
+D:\Programs\visual studio projects\UsedCars\UsedCars.Data\obj\Debug\netcoreapp2.1\UsedCars.Data.pdb
